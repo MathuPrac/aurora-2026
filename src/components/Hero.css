@@ -1,0 +1,83 @@
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 8rem 2rem 4rem; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(44,44,44,0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(240,80,35,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 80% 70%, rgba(242,106,49,0.08) 0%, transparent 60%),
+    var(--obsidian);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(240,80,35,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240,80,35,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
+}
+.aurora-glow {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, #F05023, #FAA967, #F26A31, transparent);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+.hero-eyebrow {
+  font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;
+  animation: fadeUp 1s ease 0.2s both; max-width: 500px; width: 100%;
+}
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-dark)); }
+.hero-eyebrow::after { background: linear-gradient(90deg, var(--gold-dark), transparent); }
+
+.hero-title {
+  font-family: 'Cinzel', serif; font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 700; line-height: 0.9; letter-spacing: 0.06em;
+  margin-bottom: 0.3rem; animation: fadeUp 1s ease 0.4s both;
+}
+.hero-title-aurora {
+  background: linear-gradient(135deg, #FAA967 0%, #F26A31 40%, #F05023 70%, #C03A10 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block;
+}
+.hero-title-year {
+  font-size: clamp(1.5rem, 3vw, 2.5rem); color: var(--gold-dark);
+  display: block; letter-spacing: 0.3em; margin-top: 0.4rem;
+  -webkit-text-fill-color: var(--gold-dark);
+}
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 300; font-style: italic; color: var(--text-secondary);
+  letter-spacing: 0.12em; margin-bottom: 1.2rem; animation: fadeUp 1s ease 0.6s both;
+}
+.hero-tagline {
+  font-family: 'Josefin Sans', sans-serif; font-size: clamp(0.65rem, 1.5vw, 0.82rem);
+  font-weight: 400; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 3rem; animation: fadeUp 1s ease 0.7s both;
+}
+.hero-meta {
+  display: flex; gap: 3rem; align-items: center;
+  margin-bottom: 3rem; animation: fadeUp 1s ease 0.8s both;
+}
+.hero-meta-item { text-align: center; }
+.hero-meta-label { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.3rem; }
+.hero-meta-value { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--text-primary); letter-spacing: 0.08em; }
+.hero-meta-sep { width: 1px; height: 40px; background: var(--border); }
+
+.hero-buttons { display: flex; gap: 1.2rem; justify-content: center; animation: fadeUp 1s ease 1s both; }
+
+.hero-scroll {
+  position: absolute; bottom: 2.5rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  color: var(--text-muted); font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  animation: fadeIn 1s ease 1.5s both;
+}
+.scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold-dark), transparent); animation: scrollDrop 2s ease-in-out infinite; }
+
+@media (max-width: 600px) {
+  .hero-meta { gap: 1.5rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+}

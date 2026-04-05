@@ -1,0 +1,40 @@
+.gallery-section { background: var(--obsidian); overflow: hidden; }
+
+.gallery-stats { display: flex; justify-content: center; gap: 4rem; padding: 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700;
+  background: linear-gradient(135deg, #FAA967, #F05023);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; line-height: 1; margin-bottom: 0.4rem;
+}
+.stat-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); }
+
+.gallery-marquee-wrap { overflow: hidden; position: relative; padding: 1rem 0; }
+.gallery-marquee-wrap::before,
+.gallery-marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; }
+.gallery-marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--obsidian), transparent); }
+.gallery-marquee-wrap::after  { right: 0; background: linear-gradient(90deg, transparent, var(--obsidian)); }
+
+.gallery-track { display: flex; gap: 1rem; width: max-content; animation: marquee 30s linear infinite; }
+.gallery-track:hover { animation-play-state: paused; }
+
+.gallery-img { width: 280px; height: 190px; background: var(--obsidian-surface); border: 1px solid var(--border); overflow: hidden; flex-shrink: 0; }
+.gallery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.gallery-img:hover img { transform: scale(1.04); }
+
+.gallery-img-inner {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem;
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.15em; color: var(--text-muted);
+  background: linear-gradient(135deg, var(--obsidian-surface), var(--obsidian-light));
+  transition: transform 0.5s;
+}
+.gallery-img:hover .gallery-img-inner { transform: scale(1.04); }
+.gallery-img-icon { font-size: 2rem; opacity: 0.3; }
+.gallery-img-year { font-size: 0.6rem; color: var(--gold-dark); letter-spacing: 0.2em; }
+
+.gallery-hint { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
+.gallery-hint code { font-family: monospace; font-size: 0.85rem; color: var(--gold-dark); font-style: normal; }
+
+@media (max-width: 600px) { .gallery-stats { gap: 2rem; } .stat-number { font-size: 1.8rem; } }
