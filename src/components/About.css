@@ -1,4 +1,25 @@
-.about { background: var(--obsidian-mid); }
+.about { 
+  background: var(--obsidian-mid);
+  background-image: url('/au.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 19, 25, 0.75);
+  pointer-events: none;
+}
+.about .section-inner {
+  position: relative;
+  z-index: 1;
+}
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .about-text h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold); margin-bottom: 1rem; letter-spacing: 0.08em; }
 .about-text p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 1.2rem; }
