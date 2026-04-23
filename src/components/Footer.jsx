@@ -3,14 +3,43 @@ import './Footer.css'
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-logo">AURORA '26</div>
-      <div className="footer-copy">
-        © 2026 Aurora — Conference on Computer Science · CSA, University of Sri Jayewardenepura
+      <div className="footer-main">
+        <div className="footer-left">
+          <div className="footer-logo">
+            <img src="/logo.png" alt="Aurora Logo" />
+          </div>
+          <div className="footer-description">
+            Aurora is the annual Conference on Computer Science organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura.
+          </div>
+        </div>
+        <div className="footer-right">
+          <div className="footer-links">
+            <a href="#guidelines">Guidelines</a>
+            <a href="#faq">FAQ</a>
+            <a href="mailto:csa@sci.sjp.ac.lk">Contact</a>
+          </div>
+          <div className="footer-socials">
+            <a href="#" aria-label="LinkedIn" className="social-link">
+              <img src="/ico.linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="#" aria-label="Instagram" className="social-link">
+              <img src="/ico.insta.svg" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Facebook" className="social-link">
+              <img src="/ico.facebook.svg" alt="Facebook" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="footer-links">
-        <a href="#guidelines">Guidelines</a>
-        <a href="#faq">FAQ</a>
-        <a href="mailto:csa@sci.sjp.ac.lk">Contact</a>
+      <div className="footer-bottom">
+        <div className="footer-copy">
+          © 2026 Aurora — Conference on Computer Science · CSA, University of Sri Jayewardenepura
+        </div>
+        <div className="footer-policies">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies Policy</a>
+        </div>
       </div>
     </footer>
   )

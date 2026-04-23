@@ -3,8 +3,6 @@ import './Navbar.css'
 
 const NAV_LINKS = [
   ['About',      '#about'],
-  ['Events',     '#events'],
-  ['Timeline',   '#timeline'],
   ['Gallery',    '#gallery'],
   ['Committee',  '#committee'],
   ['Guidelines', '#guidelines'],
@@ -14,18 +12,30 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [hideLinks, setHideLinks] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50)
+      
+      const aboutSection = document.getElementById('about')
+      if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop
+        setHideLinks(window.scrollY >= aboutTop)
+      }
+    }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-      <a href="#hero" className="nav-logo">AURORA<span>'</span>26</a>
+      <a href="#hero" className="nav-logo">
+        <img src="/logo.png" alt="Aurora Logo" />
+        <span className="nav-logo-text">AURORA</span>
+      </a>
 
-      <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
+      <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}${hideLinks ? ' nav-links--hidden' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
           <li key={label}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
         ))}
