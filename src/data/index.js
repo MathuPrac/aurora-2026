@@ -1,3 +1,5 @@
+
+
 // ── Aurora'26 — All site content (edit here only) ────────────────────────────
 
 // ── EVENTS / Competition Tracks ───────────────────────────────────────────────
@@ -89,49 +91,9 @@ export const TIMELINE = [
   },
 ]
 
-// ── DEPARTMENTS ───────────────────────────────────────────────────────────────
-export const DEPARTMENTS = [
-  {
-    icon: '🤖',
-    name: 'Agentic AI',
-    desc: 'Autonomous AI systems that detect, reason, and respond to real-world threats',
-  },
-  {
-    icon: '🛡️',
-    name: 'Social Engineering',
-    desc: 'Cybersecurity, phishing defence, ethical AI & human-tech interaction',
-  },
-  {
-    icon: '🌐',
-    name: 'Web Development',
-    desc: 'Frontend, backend & full-stack system engineering',
-  },
-  {
-    icon: '📊',
-    name: 'Data Science',
-    desc: 'Analytics, machine learning & intelligent data systems',
-  },
-  {
-    icon: '🔗',
-    name: 'Networking',
-    desc: 'Infrastructure, protocols & secure architecture design',
-  },
-  {
-    icon: '⚙️',
-    name: 'Software Engineering',
-    desc: 'Algorithms, system design & software quality',
-  },
-  {
-    icon: '☁️',
-    name: 'Cloud Computing',
-    desc: 'DevOps, containerisation & scalable cloud platforms',
-  },
-  {
-    icon: '🔒',
-    name: 'Cybersecurity',
-    desc: 'Ethical hacking, cryptography & digital forensics',
-  },
-]
+
+
+
 
 // ── GUIDELINES ───────────────────────────────────────────────────────────────
 export const GUIDELINES = {

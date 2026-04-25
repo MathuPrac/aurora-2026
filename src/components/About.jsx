@@ -1,11 +1,13 @@
 import './About.css'
 
+import { FaRobot, FaShieldAlt, FaAward, FaGlobe } from "react-icons/fa";
+
 const MOTIVES = [
-  { icon: '🤖', title: 'Agentic AI',       desc: 'Explore autonomous AI systems capable of detecting and responding to social engineering threats in real time.' },
-  { icon: '🛡️', title: 'Cyber Awareness',  desc: 'Build skills to identify phishing, fake urgency, and authority manipulation — the frontline of digital safety.' },
-  { icon: '🏅', title: 'Earn Recognition', desc: "Cash prizes, certificates, and a place in Aurora's hall of excellence for the brightest minds in Sri Lanka." },
-  { icon: '🌍', title: 'Industry Connect', desc: 'Interface with tech leaders from Rootcode, Virtusa, theAITeam, and more — unlock real career pathways.' },
-]
+  { icon: FaRobot, title: 'Agentic AI', desc: 'Explore autonomous AI systems capable of detecting and responding to social engineering threats in real time.' },
+  { icon: FaShieldAlt, title: 'Cyber Awareness', desc: 'Build skills to identify phishing, fake urgency, and authority manipulation — the frontline of digital safety.' },
+  { icon: FaAward, title: 'Earn Recognition', desc: "Cash prizes, certificates, and a place in Aurora's hall of excellence for the brightest minds in Sri Lanka." },
+  { icon: FaGlobe, title: 'Industry Connect', desc: 'Interface with tech leaders from Rootcode, Virtusa, theAITeam, and more — unlock real career pathways.' },
+];
 
 function About() {
   return (
@@ -18,7 +20,7 @@ function About() {
             <p>Aurora 2026 focuses on <strong>Agentic AI and Social Engineering</strong> — exploring how autonomous AI systems intersect with human behaviour, security, and ethical responsibility in modern computing.</p>
             <p>The event comprises two key segments: <strong>The Conference</strong> featuring keynote speeches, expert panels, and workshops; and <strong>The Competition</strong>, challenging participants to apply knowledge in innovative, time-bound scenarios.</p>
             <div className="about-stats">
-              {[['6+','Editions'],['500+','Past Competitors'],['10+','Industry Partners']].map(([n,l]) => (
+              {[['6+', 'Editions'], ['500+', 'Past Competitors'], ['10+', 'Industry Partners']].map(([n, l]) => (
                 <div key={l} className="about-stat">
                   <div className="about-stat-number">{n}</div>
                   <div className="about-stat-label">{l}</div>
@@ -27,13 +29,19 @@ function About() {
             </div>
           </div>
           <div className="motives-grid">
-            {MOTIVES.map(m => (
-              <div key={m.title} className="motive-card">
-                <span className="motive-icon">{m.icon}</span>
-                <h4>{m.title}</h4>
-                <p>{m.desc}</p>
-              </div>
-            ))}
+            {MOTIVES.map((m) => {
+              const Icon = m.icon;
+
+              return (
+                <div key={m.title} className="motive-card">
+                  <span className="motive-icon">
+                    <Icon size={40} />
+                  </span>
+                  <h4>{m.title}</h4>
+                  <p>{m.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
