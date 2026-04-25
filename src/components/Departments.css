@@ -12,7 +12,30 @@
 }
 .dept-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
 .dept-card:hover::after { transform: scaleX(1); }
-.dept-icon { font-size: 2rem; display: block; margin-bottom: 0.8rem; }
+.dept-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+
+  color: #f05023;
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 0 10px rgba(240, 80, 35, 0.25);
+  transition: all 0.3s ease;
+}
+
+.dept-card:hover .dept-icon {
+  border-color: rgba(240, 80, 35, 0.6);
+  box-shadow: 0 0 12px rgba(240, 80, 35, 0.45);
+  transform: scale(1.05);
+}
 .dept-card h3 { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.5rem; }
 .dept-card p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
 @media (max-width: 900px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }

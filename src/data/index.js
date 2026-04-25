@@ -245,14 +245,13 @@ export const FAQS = [
 
 // ── GALLERY ITEMS ────────────────────────────────────────────────────────────
 export const GALLERY_ITEMS = [
-  { year: "Aurora '24", label: 'Opening Ceremony',     icon: '🏛️' },
-  { year: "Aurora '24", label: 'Panel Discussion — Generative AI', icon: '🤖' },
-  { year: "Aurora '24", label: 'Competition Winners',  icon: '🏆' },
-  { year: "Aurora '24", label: 'Code Sprint',          icon: '💻' },
-  { year: "Aurora '24", label: 'Organizing Committee', icon: '🎯' },
-  { year: "Aurora '24", label: 'Digital Entrepreneurship Panel', icon: '🚀' },
-  { year: "Aurora '22", label: 'Awards Night',         icon: '🌟' },
-  { year: "Aurora '22", label: 'Networking Hall',      icon: '🔗' },
-  { year: "Aurora '22", label: 'Keynote Session',      icon: '🎤' },
-  { year: "Aurora '22", label: 'Hackathon Floor',      icon: '⚡' },
-]
+  { year: "Aurora '24", label: 'Opening Ceremony', src: '/photos/1.jpeg' },
+  { year: "Aurora '24", label: 'Panel Discussion — Generative AI', src: '/photos/2.jpeg' },
+  { year: "Aurora '24", label: 'Competition Winners', src: '/photos/3.jpeg' },
+  { year: "Aurora '24", label: 'Code Sprint', src: '/photos/4.jpeg' },
+  { year: "Aurora '24", label: 'Organizing Committee', src: '/photos/5.jpeg' },
+  { year: "Aurora '24", label: 'Digital Entrepreneurship Panel', src: '/photos/6.jpeg' },
+  { year: "Aurora '22", label: 'Awards Night', src: '/photos/7.jpeg' },
+  { year: "Aurora '22", label: 'Networking Hall', src: '/photos/8.jpeg' },
+  { year: "Aurora '22", label: 'Keynote Session', src: '/photos/9.jpeg' },
+];

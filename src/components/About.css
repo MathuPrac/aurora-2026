@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 19, 25, 0.75);
+  background: rgba(10, 12, 16, 0.9);
   pointer-events: none;
 }
 .about .section-inner {
@@ -22,8 +22,9 @@
 }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .about-text h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold); margin-bottom: 1rem; letter-spacing: 0.08em; }
-.about-text p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 1.2rem; }
+.about-text p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 1.2rem; color: rgba(255,255,255,0.9);}
 .about-text strong { color: var(--gold-light); font-weight: 600; }
+
 .about-stats { display: flex; gap: 2rem; margin-top: 2rem; }
 .about-stat-number { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold); }
 .about-stat-label { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; }
@@ -32,8 +33,40 @@
 .motive-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--crimson), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
 .motive-card:hover { border-color: var(--border-glow); }
 .motive-card:hover::before { transform: scaleX(1); }
-.motive-icon { font-size: 1.6rem; margin-bottom: 0.6rem; display: block; }
+.motive-icon{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+
+  color: #f05023;
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 0 10px rgba(240, 80, 35, 0.25);
+  transition: all 0.3s ease;
+}
+
+.motive-card:hover .motive-icon {
+  border-color: rgba(240, 80, 35, 0.6);
+  box-shadow: 0 0 12px rgba(240, 80, 35, 0.45);
+  transform: scale(1.05);
+}
 .motive-card h4 { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.4rem; }
 .motive-card p { font-size: 0.8rem; line-height: 1.6; color: var(--text-muted); }
+
+.about-text h3,
+.motive-card h4 {
+  text-shadow: 0 0 8px rgba(255, 215, 160, 0.15);
+}
+
+.about-text p {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
 @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
 @media (max-width: 480px) { .about-stats { gap: 1.2rem; } .motives-grid { grid-template-columns: 1fr; } }

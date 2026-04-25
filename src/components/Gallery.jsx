@@ -51,12 +51,12 @@ function Gallery() {
         </div>
       </div>
 
-      <div className="section-inner" style={{ paddingTop: '2rem' }}>
+      {/* <div className="section-inner" style={{ paddingTop: '2rem' }}>
         <p className="gallery-hint">
           Replace placeholder cards with your actual event photos — add a <code>src</code> field
           to each item in <code>src/data/index.js</code> and place images in <code>public/photos/</code>.
         </p>
-      </div>
+      </div> */}
     </section>
   )
 }
