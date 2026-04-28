@@ -2,22 +2,22 @@ import { useState, useEffect } from 'react'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  ['About',      '#about'],
-  ['Gallery',    '#gallery'],
-  ['Committee',  '#committee'],
+  ['About', '#about'],
+  ['Gallery', '#gallery'],
+  ['Committee', '#committee'],
   ['Guidelines', '#guidelines'],
-  ['FAQ',        '#faq'],
+  ['FAQ', '#faq'],
 ]
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [hideLinks, setHideLinks] = useState(false)
+  // const [hideLinks, setHideLinks] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50)
-      
+
       const aboutSection = document.getElementById('about')
       if (aboutSection) {
         const aboutTop = aboutSection.offsetTop
@@ -35,7 +35,7 @@ function Navbar() {
         <span className="nav-logo-text">AURORA</span>
       </a>
 
-      <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}${hideLinks ? ' nav-links--hidden' : ''}`}>
+      <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
           <li key={label}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
         ))}
