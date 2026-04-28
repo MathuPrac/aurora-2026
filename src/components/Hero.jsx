@@ -25,21 +25,23 @@ function Hero() {
           <span className="hero-meta-label">Conference Day</span>
           <span className="hero-meta-value">July 18, 2026</span>
         </div>
-        <div className="hero-meta-sep" />
+        {/* <div className="hero-meta-sep" /> */}
         <div className="hero-meta-item">
           <span className="hero-meta-label">Organised By</span>
-          <span className="hero-meta-value">CSA — USJ</span>
+          <span className="hero-meta-value" style={{ fontSize: '0.72rem', lineHeight: '1.4' }}>
+            Computer Science Association<br />University of Sri Jayewardenepura
+          </span>
         </div>
-        <div className="hero-meta-sep" />
+        {/* <div className="hero-meta-sep" />
         <div className="hero-meta-item">
           <span className="hero-meta-label">Theme</span>
           <span className="hero-meta-value">Agentic AI</span>
-        </div>
+        </div> */}
       </div>
 
       <div className="hero-buttons">
         <a href="#register" className="btn-primary">Register via Google</a>
-        <a href="#events"   className="btn-secondary">Explore Events</a>
+        <a href="#events" className="btn-secondary">Explore Events</a>
       </div>
 
       <div className="hero-scroll">

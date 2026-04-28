@@ -15,18 +15,18 @@ function Guidelines() {
           </p>
         </div>
         <div className="guidelines-grid">
-          <div className="guideline-group">
+          <div className="guidelines-center">
             <h3>Eligibility Criteria</h3>
             <ul className="guideline-list">
               {GUIDELINES.eligibility.map((item, i) => <li key={i}>{item}</li>)}
             </ul>
           </div>
-          <div className="guideline-group">
+          {/* <div className="guideline-group">
             <h3>Code of Conduct</h3>
             <ul className="guideline-list">
               {GUIDELINES.conduct.map((item, i) => <li key={i}>{item}</li>)}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

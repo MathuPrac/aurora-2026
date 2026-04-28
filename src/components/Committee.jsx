@@ -59,18 +59,22 @@ function Committee() {
             ))}
           </div>
 
-          <Divider label="Members" />
-          <div className="members-grid">
-            {current.members.map((m, i) => (
-              <div key={i} className="member-card">
-                <div className="member-avatar">
-                  {m.img ? <img src={m.img} alt={m.name} /> : '👤'}
-                </div>
-                <div className="member-name">{m.name}</div>
-                <div className="member-role-tag">Member</div>
+          {current.members.length > 0 && (
+            <>
+              <Divider label="Members" />
+              <div className="members-grid">
+                {current.members.map((m, i) => (
+                  <div key={i} className="member-card">
+                    <div className="member-avatar">
+                      {m.img ? <img src={m.img} alt={m.name} /> : '👤'}
+                    </div>
+                    <div className="member-name">{m.name}</div>
+                    <div className="member-role-tag">Member</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       </div>
     </section>

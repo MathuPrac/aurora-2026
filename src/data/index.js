@@ -98,12 +98,12 @@ export const TIMELINE = [
 // ── GUIDELINES ───────────────────────────────────────────────────────────────
 export const GUIDELINES = {
   eligibility: [
-    'Open to all Sri Lankan undergraduates and A/L (Advanced Level) school students',
-    'Undergraduate teams must consist of 2–4 members from the same institution',
-    'Valid student ID must be presented at event registration',
-    'School students must be currently enrolled in an A/L stream',
-    'Each participant may register for a maximum of one competition track',
-    'Participants must carry their own laptops for development-based events',
+    'Open to all Sri Lankan undergraduates and school students',
+    'Undergraduate teams must consist of 2–4 members from the same institution'
+    // ,'Valid student ID must be presented at event registration',
+    // 'School students must be currently enrolled in an A/L stream',
+    // 'Each participant may register for a maximum of one competition track',
+    // 'Participants must carry their own laptops for development-based events',
   ],
   conduct: [
     'All solutions must be developed during the designated competition period',
@@ -115,97 +115,112 @@ export const GUIDELINES = {
   ],
 }
 
-// ── COMMITTEES ───────────────────────────────────────────────────────────────
+// // ── COMMITTEES ───────────────────────────────────────────────────────────────
+// export const COMMITTEES = [
+//   {
+//     id: 'technical',
+//     label: 'Technical',
+//     color: '#F05023',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
+//       { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 3', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+//   {
+//     id: 'designing',
+//     label: 'Designing',
+//     color: '#F26A31',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 2', img: null },
+//       { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 2', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+//   {
+//     id: 'finance',
+//     label: 'Finance',
+//     color: '#FAA967',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+//   {
+//     id: 'event',
+//     label: 'Event',
+//     color: '#C03A10',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
+//       { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 2', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+//   {
+//     id: 'conference',
+//     label: 'Conference',
+//     color: '#F05023',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+//   {
+//     id: 'logistics',
+//     label: 'Logistics',
+//     color: '#F26A31',
+//     heads: [
+//       { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 2', img: null },
+//     ],
+//     members: [
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//       { name: 'Member Name', img: null },
+//     ],
+//   },
+// ]
 export const COMMITTEES = [
   {
-    id: 'technical',
-    label: 'Technical',
+    id: 'executive',
+    label: 'Executive Committee',
     color: '#F05023',
     heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
-      { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 3', img: null },
+      { name: 'Elangeswaran Kishor',      role: 'President',          dept: 'csa@sci.sjp.ac.lk',              img: null },
+      { name: 'Sachith Wickramarachchi',  role: 'Vice President',     dept: 'sachith@sci.sjp.ac.lk',          img: null },
+      { name: 'Chamod Devranga',          role: 'Secretary',          dept: 'chamod@sci.sjp.ac.lk',           img: null },
+      { name: 'Rusira Sandul',            role: 'Treasurer',          dept: 'rusira@sci.sjp.ac.lk',           img: null },
     ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
-  },
-  {
-    id: 'designing',
-    label: 'Designing',
-    color: '#F26A31',
-    heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 2', img: null },
-      { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 2', img: null },
-    ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
-  },
-  {
-    id: 'finance',
-    label: 'Finance',
-    color: '#FAA967',
-    heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
-    ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
-  },
-  {
-    id: 'event',
-    label: 'Event',
-    color: '#C03A10',
-    heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
-      { name: 'Head Name', role: 'Deputy Head',    dept: 'CS — Year 2', img: null },
-    ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
-  },
-  {
-    id: 'conference',
-    label: 'Conference',
-    color: '#F05023',
-    heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 3', img: null },
-    ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
-  },
-  {
-    id: 'logistics',
-    label: 'Logistics',
-    color: '#F26A31',
-    heads: [
-      { name: 'Head Name', role: 'Committee Head', dept: 'CS — Year 2', img: null },
-    ],
-    members: [
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-      { name: 'Member Name', img: null },
-    ],
+    members: [],
   },
 ]
+
 
 // ── FAQs ─────────────────────────────────────────────────────────────────────
 export const FAQS = [
