@@ -3,11 +3,11 @@ import About       from '../components/About'
 import Events      from '../components/Events'
 import Timeline    from '../components/Timeline'
 import Gallery     from '../components/Gallery'
-import Departments from '../components/Departments'
+// import Departments from '../components/Departments'
 import Guidelines  from '../components/Guidelines'
 import Committee   from '../components/Committee'
 import FAQ         from '../components/FAQ'
-import Register    from '../components/Register'
+// import Register    from '../components/Register'
 
 function Home() {
   return (
@@ -17,11 +17,11 @@ function Home() {
       <Events />
       <Timeline />
       <Gallery />
-      <Departments />
+      {/* <Departments /> */}
       <Guidelines />
       <Committee />
       <FAQ />
-      <Register />
+      {/* <Register /> */}
     </main>
   )
 }
