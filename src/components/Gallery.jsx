@@ -18,7 +18,7 @@ function Gallery() {
           <h2 className="section-title">A Legacy in Frames</h2>
           <div className="section-line" />
           <p className="section-desc">
-            From Aurora 2022 to Aurora 2024 — six editions of breakthroughs, late nights,
+            From Aurora 2015 to Aurora 2024 — six editions of breakthroughs, late nights,
             fierce competition, and unforgettable moments, captured forever.
           </p>
         </div>
