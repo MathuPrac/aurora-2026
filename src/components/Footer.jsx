@@ -19,13 +19,13 @@ function Footer() {
             <a href="mailto:csa@sci.sjp.ac.lk">Contact</a>
           </div>
           <div className="footer-socials">
-            <a href="#" aria-label="LinkedIn" className="social-link">
+            <a href="https://www.linkedin.com/company/csa-usj/" aria-label="LinkedIn" className="social-link">
               <img src="/ico.linkedin.svg" alt="LinkedIn" />
             </a>
-            <a href="#" aria-label="Instagram" className="social-link">
+            <a href="https://www.instagram.com/csa_usj?igsh=ZTVoMmk5azZ6eThl" aria-label="Instagram" className="social-link">
               <img src="/ico.insta.svg" alt="Instagram" />
             </a>
-            <a href="#" aria-label="Facebook" className="social-link">
+            <a href="https://www.facebook.com/csausj" aria-label="Facebook" className="social-link">
               <img src="/ico.facebook.svg" alt="Facebook" />
             </a>
           </div>

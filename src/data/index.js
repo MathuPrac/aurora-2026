@@ -45,42 +45,42 @@ export const EVENTS = [
 // ── TIMELINE ─────────────────────────────────────────────────────────────────
 export const TIMELINE = [
   {
-    date: 'Apr 27, 2026',
+    date: 'May 2, 2026',
     title: 'Open Registrations',
     desc: 'Registrations open for all Sri Lankan undergraduates and A/L students interested in participating in Aurora 2026.',
   },
   {
-    date: 'May 09, 2026',
+    date: 'May 16, 2026',
     title: 'Closing Registrations & Proposal Deadline',
     desc: 'Deadline for undergraduates to register and submit their project proposals for Aurora 2026.',
   },
   {
-    date: 'May 16, 2026',
+    date: 'May 23, 2026',
     title: 'Start of Implementation Phase',
     desc: 'The first 6 selected proposals advance to the implementation phase. Undergraduate participants begin building their projects.',
   },
   {
-    date: 'Jun 20, 2026',
+    date: 'Jun 13, 2026',
     title: 'Closing Registrations for School Students',
     desc: 'Final deadline for school students to register for participation in Aurora 2026.',
   },
   {
-    date: 'Jun 27, 2026',
+    date: 'Jun 20, 2026',
     title: 'Implementation Closing — Undergraduates',
     desc: 'Deadline for completion of projects by undergraduate participants.',
   },
   {
-    date: 'Jul 02, 2026',
+    date: 'Jun 25, 2026',
     title: 'School Students Awareness Session',
     desc: 'Session dedicated to school student participants covering Agentic AI and Social Engineering.',
   },
   {
-    date: 'Jul 04, 2026',
+    date: 'Jun 27, 2026',
     title: 'Final Competition — Undergraduates',
     desc: 'Undergraduate teams present their developed projects to a panel of industry experts.',
   },
   {
-    date: 'Jul 07, 2026',
+    date: 'Jul 01, 2026',
     title: 'School Competition Day',
     desc: 'Competition session dedicated exclusively to school student participants.',
   },
@@ -98,11 +98,11 @@ export const TIMELINE = [
 // ── GUIDELINES ───────────────────────────────────────────────────────────────
 export const GUIDELINES = {
   eligibility: [
-    'Open to all Sri Lankan undergraduates and school students',
-    'Undergraduate teams must consist of 2–4 members from the same institution'
-    // ,'Valid student ID must be presented at event registration',
-    // 'School students must be currently enrolled in an A/L stream',
-    // 'Each participant may register for a maximum of one competition track',
+    'Each team must have exactly 4 members from the same university/school',
+    'Only current students (undergraduates or school students) can participate, pass-outs/school leavers are not allowed',
+    'All team members must actively participate in required activities (awareness session, quiz, poster, demo, etc.)',
+    'Each team must submit one proposal on or before the proposal submission deadline',
+    'No rule violations (including use of AI/unauthorized materials where prohibited) that will cause for an immediate disqualification and judges’ decisions are final',
     // 'Participants must carry their own laptops for development-based events',
   ],
   conduct: [
@@ -212,10 +212,10 @@ export const COMMITTEES = [
     label: 'Executive Committee',
     color: '#F05023',
     heads: [
-      { name: 'Elangeswaran Kishor',      role: 'President',          dept: 'csa@sci.sjp.ac.lk',              img: null },
-      { name: 'Sachith Wickramarachchi',  role: 'Vice President',     dept: 'sachith@sci.sjp.ac.lk',          img: null },
-      { name: 'Chamod Devranga',          role: 'Secretary',          dept: 'chamod@sci.sjp.ac.lk',           img: null },
-      { name: 'Rusira Sandul',            role: 'Treasurer',          dept: 'rusira@sci.sjp.ac.lk',           img: null },
+      { name: 'Elangeswaran Kishor', role: 'President', dept: 'csa@sci.sjp.ac.lk', img: null },
+      { name: 'Sachith Wickramarachchi', role: 'Vice President', dept: 'sachith@sci.sjp.ac.lk', img: null },
+      { name: 'Chamod Devranga', role: 'Secretary', dept: 'chamod@sci.sjp.ac.lk', img: null },
+      { name: 'Rusira Sandul', role: 'Treasurer', dept: 'rusira@sci.sjp.ac.lk', img: null },
     ],
     members: [],
   },
