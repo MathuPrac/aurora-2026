@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section id="hero" className="hero">
       <video className="hero-video" autoPlay muted loop playsInline>
-        <source src="/PixVerse_V6_Image_Text_360P_i_need_to_smoothly.mp4" type="video/mp4" />
+        <source src="/PixVerse_V6_Transition_720P_make_the_aurora_mo.mp4" type="video/mp4" />
       </video>
       <div className="hero-bg" />
       <div className="hero-grid" />
