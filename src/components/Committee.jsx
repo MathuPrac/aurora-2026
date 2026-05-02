@@ -39,7 +39,6 @@ function Committee() {
         </div>
 
         <div className="committee-panel" key={active}>
-          <Divider label="Committee Heads" />
           <div className="committee-heads">
             {current.heads.map((h, i) => (
               <div key={i} className="head-card">
