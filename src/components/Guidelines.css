@@ -1,4 +1,4 @@
-.guidelines-section { background: var(--obsidian); }
+.guidelines-section { background: rgba(14, 16, 20, 0.58); }
 .guidelines-grid { display: flex; grid-template-columns: 1fr 1fr; }
 
 .guidelines-center {

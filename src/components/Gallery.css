@@ -1,4 +1,4 @@
-.gallery-section { background: var(--obsidian); overflow: hidden; }
+.gallery-section { background: rgba(14, 16, 20, 0.58); overflow: hidden; }
 
 .gallery-stats { display: flex; justify-content: center; gap: 4rem; padding: 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .stat-item { text-align: center; }
@@ -13,8 +13,8 @@
 .gallery-marquee-wrap { overflow: hidden; position: relative; padding: 1rem 0; }
 .gallery-marquee-wrap::before,
 .gallery-marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; }
-.gallery-marquee-wrap::before { left: 0; background: linear-gradient(90deg, var(--obsidian), transparent); }
-.gallery-marquee-wrap::after  { right: 0; background: linear-gradient(90deg, transparent, var(--obsidian)); }
+.gallery-marquee-wrap::before { left: 0; background: linear-gradient(90deg, rgba(14, 16, 20, 0.9), transparent); }
+.gallery-marquee-wrap::after  { right: 0; background: linear-gradient(90deg, transparent, rgba(14, 16, 20, 0.9)); }
 
 .gallery-track { display: flex; gap: 1rem; width: max-content; animation: marquee 30s linear infinite; }
 .gallery-track:hover { animation-play-state: paused; }

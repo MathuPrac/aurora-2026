@@ -1,4 +1,4 @@
-.committee-section { background: var(--obsidian); }
+.committee-section { background: rgba(14, 16, 20, 0.58); }
 
 .committee-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3.5rem; }
 .committee-tab {

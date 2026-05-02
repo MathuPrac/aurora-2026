@@ -1,4 +1,4 @@
-.departments-section { background: var(--obsidian-mid); }
+.departments-section { background: rgba(20, 22, 26, 0.58); }
 .dept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 .dept-card {
   background: var(--obsidian); border: 1px solid var(--border);

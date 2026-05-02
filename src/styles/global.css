@@ -23,6 +23,10 @@ html { scroll-behavior: smooth; }
 
 body {
   background: var(--obsidian);
+  background-image: linear-gradient(rgba(8, 10, 14, 0.72), rgba(8, 10, 14, 0.72)), url('/au.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: 'Cinzel', serif;
   font-weight: 300;

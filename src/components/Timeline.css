@@ -1,4 +1,4 @@
-.timeline-section { background: var(--obsidian-mid); }
+.timeline-section { background: rgba(20, 22, 26, 0.58); }
 
 .timeline {
   position: relative; max-width: 800px; margin: 0 auto; padding: 0 2rem;

@@ -29,9 +29,9 @@
 .about-stat-number { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold); }
 .about-stat-label { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; }
 .motives-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.motive-card { background: var(--obsidian-surface); border: 1px solid var(--border); padding: 1.4rem; position: relative; overflow: hidden; transition: border-color 0.3s; }
+.motive-card { background: rgba(18, 22, 30, 0.46); border: 1px solid var(--border); padding: 1.4rem; position: relative; overflow: hidden; transition: border-color 0.22s ease, background-color 0.22s ease; }
 .motive-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--crimson), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
-.motive-card:hover { border-color: var(--border-glow); }
+.motive-card:hover { border-color: var(--border-glow); background: rgba(18, 22, 30, 0.38); }
 .motive-card:hover::before { transform: scaleX(1); }
 .motive-icon{
   width: 60px;
