@@ -74,10 +74,10 @@ section { position: relative; }
 }
 
 .section-desc {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem; color: var(--text-secondary);
   max-width: 640px; margin: 1.5rem auto 0;
-  line-height: 1.8; font-style: italic;
+  line-height: 1.8;
 }
 
 .btn-primary {

@@ -5,5 +5,5 @@
 .faq-q:hover { color: var(--gold); }
 .faq-icon { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; transition: transform 0.3s; font-style: normal; line-height: 1; }
 .faq-icon--open { transform: rotate(45deg); }
-.faq-a { font-family: 'Cormorant Garamond', serif; font-size: 1rem; line-height: 1.8; color: var(--text-secondary); max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+.faq-a { font-family: 'Rubik', sans-serif; font-size: 0.85rem; line-height: 1.8; color: #ffb88c; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
 .faq-a--open { max-height: 400px; padding-bottom: 1.4rem; }
