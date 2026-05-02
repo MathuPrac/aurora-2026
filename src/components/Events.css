@@ -5,8 +5,8 @@
 .event-card:hover { border-color: var(--border-glow); transform: translateY(-4px); }
 .event-card:hover .event-card-glow { opacity: 1; }
 .event-dept { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.6rem; display: block; }
-.event-card h3 { font-family: 'Cinzel', serif; font-size: 1.05rem; letter-spacing: 0.06em; color: var(--text-primary); margin-bottom: 0.8rem; }
-.event-card p { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.2rem; }
+.event-card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; letter-spacing: 0.06em; color: var(--text-primary); margin-bottom: 0.8rem; }
+.event-card p { font-family: 'Rubik', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.2rem; }
 .event-tag { display: inline-block; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--crimson-light); border: 1px solid rgba(242,106,49,0.3); padding: 0.2rem 0.7rem; }
 @media (max-width: 900px) { .events-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .events-grid { grid-template-columns: 1fr; } }

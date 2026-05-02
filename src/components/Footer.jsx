@@ -9,7 +9,7 @@ function Footer() {
             <img src="/logo.png" alt="Aurora Logo" />
           </div>
           <div className="footer-description">
-            Aurora is the annual Conference on Computer Science organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura.
+            Annual Conference on Computer Science organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura.
           </div>
         </div>
         <div className="footer-right">

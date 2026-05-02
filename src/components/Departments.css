@@ -36,6 +36,6 @@
   box-shadow: 0 0 12px rgba(240, 80, 35, 0.45);
   transform: scale(1.05);
 }
-.dept-card h3 { font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.5rem; }
-.dept-card p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+.dept-card h3 { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.5rem; }
+.dept-card p { font-family: 'Rubik', sans-serif; font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
 @media (max-width: 900px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }

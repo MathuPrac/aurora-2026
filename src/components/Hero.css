@@ -30,6 +30,12 @@
   background: linear-gradient(90deg, transparent, #F05023, #FAA967, #F26A31, transparent);
   animation: glowPulse 4s ease-in-out infinite;
 }
+
+.hero-aurora-outline {
+  position: absolute; top: 2%; left: 50%; transform: translateX(-50%);
+  height: 360px; width: auto; z-index: 4; opacity: 0.85;
+  pointer-events: none;
+}
 .hero-eyebrow {
   display: none;
 }
@@ -41,7 +47,7 @@
   color: white;
 }
 .hero-subtitle {
-  font-family: 'Roboto', sans-serif; font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-family: 'Rubik', sans-serif; font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   font-weight: 400; font-style: normal; color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.02em; margin-bottom: 3rem; animation: fadeUp 1s ease 0.6s both; position: relative; z-index: 3;
   line-height: 1.6;

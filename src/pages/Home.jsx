@@ -14,9 +14,9 @@ function Home() {
     <main>
       <Hero />
       <About />
+      <Gallery />
       <Events />
       <Timeline />
-      <Gallery />
       {/* <Departments /> */}
       <Guidelines />
       <Committee />
