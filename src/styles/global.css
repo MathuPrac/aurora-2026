@@ -88,7 +88,7 @@ section { position: relative; }
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   border: none; cursor: pointer;
   padding: 1rem 2.5rem; text-decoration: none;
-  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  border-radius: 50px;
   transition: all 0.3s; display: inline-block;
   position: relative; overflow: hidden;
 }
@@ -99,13 +99,15 @@ section { position: relative; }
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.75rem; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold); background: transparent;
-  border: 1px solid var(--gold-dark); cursor: pointer;
+  color: var(--gold); background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(240, 80, 35, 0.4); cursor: pointer;
   padding: 1rem 2.5rem; text-decoration: none;
-  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  border-radius: 50px;
   transition: all 0.3s; display: inline-block;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-.btn-secondary:hover { background: rgba(240,80,35,0.08); border-color: var(--gold); }
+.btn-secondary:hover { background: rgba(240,80,35,0.15); border-color: var(--gold); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

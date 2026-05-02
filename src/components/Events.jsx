@@ -7,7 +7,7 @@ function Events() {
       <div className="section-inner">
         <div className="section-header">
           <span className="section-eyebrow">Competition Tracks</span>
-          <h2 className="section-title">Six Arenas of Excellence</h2>
+          <h2 className="section-title">Competition Flow</h2>
           <div className="section-line" />
           <p className="section-desc">Aurora 2026 challenges participants to design, build, and defend AI systems that stand at the intersection of Agentic AI and Social Engineering.</p>
         </div>
