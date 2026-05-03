@@ -82,17 +82,18 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100svh;
-    min-height: 100dvh;
+    min-height: 0;
+    height: auto;
     justify-content: flex-start;
-    padding: 6.5rem 1.2rem 2.5rem;
+    padding: 6.5rem 1.2rem 1.5rem;
   }
 
   .hero-video {
     object-fit: cover;
-    object-position: center center;
-    transform: none;
-    opacity: 0.5;
+    object-position: center 28%;
+    transform: scale(1.08);
+    transform-origin: center center;
+    opacity: 0.56;
   }
 
   .hero-bg {
@@ -146,12 +147,15 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding: 6rem 1rem 2.2rem;
+    min-height: 0;
+    height: auto;
+    padding: 6rem 1rem 1.3rem;
   }
 
   .hero-video {
-    object-position: 58% center;
-    opacity: 0.54;
+    object-position: center 22%;
+    transform: scale(1.14);
+    opacity: 0.58;
   }
 
   .hero-aurora-outline {
