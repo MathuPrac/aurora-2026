@@ -23,8 +23,8 @@
     linear-gradient(rgba(240,80,35,0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(240,80,35,0.02) 1px, transparent 1px);
   background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
 }
 .aurora-glow {
   position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2;
@@ -66,11 +66,107 @@
 
 .hero-buttons { display: flex; gap: 1.5rem; justify-content: center; animation: fadeUp 1s ease 0.8s both; position: relative; z-index: 3; flex-wrap: wrap; }
 
+.hero-register-cta.is-disabled {
+  opacity: 0.78;
+  pointer-events: none;
+  filter: saturate(0.95);
+}
+
+.hero-register-cta.is-active {
+  box-shadow: 0 0 24px rgba(240, 80, 35, 0.28);
+}
+
 .hero-scroll {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+    justify-content: flex-start;
+    padding: 6.5rem 1.2rem 2.5rem;
+  }
+
+  .hero-video {
+    object-fit: cover;
+    object-position: center center;
+    transform: none;
+    opacity: 0.5;
+  }
+
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 90% 66% at 50% 28%, rgba(10, 11, 13, 0.84) 0%, transparent 70%),
+      radial-gradient(ellipse 58% 42% at 20% 80%, rgba(240, 80, 35, 0.08) 0%, transparent 62%),
+      radial-gradient(ellipse 48% 36% at 80% 70%, rgba(242, 106, 49, 0.06) 0%, transparent 62%);
+  }
+
+  .hero-aurora-outline {
+    top: 5%;
+    height: 170px;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    margin-top: 7.8rem;
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.6rem, 8.2vw, 2.3rem);
+    line-height: 1.24;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.4rem;
+    max-width: 34rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: min(100%, 320px);
+    text-align: center;
+    padding: 0.9rem 1.3rem;
+    letter-spacing: 0.14em;
+  }
+}
+
 @media (max-width: 600px) {
+  .hero {
+    padding: 6rem 1rem 2.2rem;
+  }
+
+  .hero-video {
+    object-position: 58% center;
+    opacity: 0.54;
+  }
+
+  .hero-aurora-outline {
+    top: 6%;
+    height: 145px;
+  }
+
+  .hero-title {
+    margin-top: 7rem;
+    font-size: clamp(1.45rem, 8.8vw, 2rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem;
+  }
+
   .hero-meta { gap: 1.5rem; }
-  .hero-buttons { flex-direction: column; align-items: center; }
 }

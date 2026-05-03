@@ -1,29 +1,16 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { useRegistrationCta } from '../hooks/useRegistrationCta'
 import './Hero.css'
 
 function Hero() {
-  const [timeLeft, setTimeLeft] = useState(25 * 3600) // 25 hours in seconds
   const videoRef = useRef(null)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0))
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [])
+  const registerCta = useRegistrationCta()
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.7
     }
   }, [])
-
-  const formatTime = (seconds) => {
-    const hours = Math.floor(seconds / 3600)
-    const minutes = Math.floor((seconds % 3600) / 60)
-    const secs = seconds % 60
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
-  }
 
   return (
     <section id="hero" className="hero">
@@ -45,7 +32,15 @@ Join researchers, innovators, and future tech leaders for an immersive experienc
       <p className="hero-tagline">Compete in Sri Lanka's premier university computing competition.</p>
 
       <div className="hero-buttons">
-        <a href="#register" className="btn-primary">Register in {formatTime(timeLeft)}</a>
+        <a
+          href={registerCta.href}
+          className={`btn-primary hero-register-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
+          onClick={registerCta.onClick}
+          aria-disabled={registerCta['aria-disabled']}
+          tabIndex={registerCta.tabIndex}
+        >
+          {registerCta.label}
+        </a>
         <a href="#about" className="btn-secondary">See Details</a>
       </div>
 

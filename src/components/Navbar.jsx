@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useRegistrationCta } from '../hooks/useRegistrationCta'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -12,17 +13,11 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  // const [hideLinks, setHideLinks] = useState(false)
+  const registerCta = useRegistrationCta()
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50)
-
-      const aboutSection = document.getElementById('about')
-      if (aboutSection) {
-        const aboutTop = aboutSection.offsetTop
-        setHideLinks(window.scrollY >= aboutTop)
-      }
     }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
@@ -41,7 +36,20 @@ function Navbar() {
         ))}
       </ul>
 
-      <a href="#register" className="nav-cta" onClick={() => setMenuOpen(false)}>Register Now</a>
+      <a
+        href={registerCta.href}
+        className={`nav-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
+        onClick={(event) => {
+          registerCta.onClick(event)
+          if (registerCta.isOpen) {
+            setMenuOpen(false)
+          }
+        }}
+        aria-disabled={registerCta['aria-disabled']}
+        tabIndex={registerCta.tabIndex}
+      >
+        {registerCta.label}
+      </a>
 
       <button className="nav-hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
         <span /><span /><span />

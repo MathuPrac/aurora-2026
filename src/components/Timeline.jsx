@@ -1,7 +1,32 @@
+import { useEffect, useRef } from 'react'
 import { TIMELINE } from '../data'
 import './Timeline.css'
 
 function Timeline() {
+  const itemRefs = useRef([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+          }
+        })
+      },
+      {
+        threshold: 0.45,
+        rootMargin: '0px 0px -12% 0px'
+      }
+    )
+
+    itemRefs.current.forEach((item) => {
+      if (item) observer.observe(item)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="timeline" className="timeline-section">
       <div className="section-inner">
@@ -12,7 +37,13 @@ function Timeline() {
         </div>
         <div className="timeline">
           {TIMELINE.map((item, i) => (
-            <div key={i} className="timeline-item">
+            <div
+              key={i}
+              className="timeline-item"
+              ref={(el) => {
+                itemRefs.current[i] = el
+              }}
+            >
               {i % 2 === 0 ? (
                 <>
                   <div className="tl-content tl-content--left">

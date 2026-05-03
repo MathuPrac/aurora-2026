@@ -4,6 +4,7 @@
   padding: 0 4rem; height: 85px;
   background: transparent;
   border-bottom: 1px solid transparent;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   transition: box-shadow 0.3s;
 }
@@ -21,6 +22,7 @@
 .nav-links { 
   display: flex; gap: 2.5rem; list-style: none; transition: all 0.4s ease;
   background: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 0.8rem 3rem;
   border-radius: 50px;
@@ -52,6 +54,15 @@
   transition: opacity 0.3s; display: inline-block; flex-shrink: 0;
 }
 .nav-cta:hover { opacity: 0.85; }
+.nav-cta.is-disabled {
+  opacity: 0.72;
+  pointer-events: none;
+  filter: saturate(0.9);
+}
+
+.nav-cta.is-active {
+  box-shadow: 0 0 18px rgba(240, 80, 35, 0.35);
+}
 
 .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
 .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; transition: all 0.3s; }
@@ -62,6 +73,7 @@
     display: none; position: absolute; top: 70px; left: 0; right: 0;
     flex-direction: column; gap: 0;
     background: rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0;
     padding: 0;

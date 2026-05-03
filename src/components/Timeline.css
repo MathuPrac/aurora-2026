@@ -17,10 +17,55 @@
   width: 28px; height: 28px;
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   border: 2px solid var(--obsidian-mid); border-radius: 50%;
-  box-shadow: 0 0 12px rgba(240,80,35,0.5);
+  box-shadow: 0 0 10px rgba(240,80,35,0.35);
   display: flex; align-items: center; justify-content: center;
+  transition: box-shadow 0.35s ease, transform 0.35s ease, filter 0.35s ease;
 }
 .tl-dot span { font-family: 'Montserrat', serif; font-size: 0.6rem; font-weight: 700; color: var(--obsidian); }
+
+.timeline-item.is-visible .tl-dot {
+  animation: tlDotFlash 0.7s ease-out 1, tlDotBreath 2s ease-in-out 0.7s infinite;
+  box-shadow:
+    0 0 0 3px rgba(242, 106, 49, 0.18),
+    0 0 16px rgba(240, 80, 35, 0.82),
+    0 0 34px rgba(250, 169, 103, 0.6);
+  filter: saturate(1.08);
+}
+
+@keyframes tlDotFlash {
+  0% {
+    transform: scale(0.78);
+    box-shadow:
+      0 0 0 0 rgba(242, 106, 49, 0.42),
+      0 0 0 rgba(240, 80, 35, 0.2);
+  }
+  70% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 8px rgba(242, 106, 49, 0),
+      0 0 30px rgba(240, 80, 35, 0.95),
+      0 0 48px rgba(250, 169, 103, 0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tlDotBreath {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 3px rgba(242, 106, 49, 0.14),
+      0 0 13px rgba(240, 80, 35, 0.65),
+      0 0 26px rgba(250, 169, 103, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(242, 106, 49, 0.22),
+      0 0 20px rgba(240, 80, 35, 0.88),
+      0 0 36px rgba(250, 169, 103, 0.62);
+  }
+}
 .tl-content--left { text-align: right; padding-right: 2rem; }
 .tl-content--right { text-align: left; padding-left: 2rem; }
 .tl-date { font-family: 'Montserrat', serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.3rem; }
@@ -35,4 +80,10 @@
   .tl-content--left,
   .tl-content--right { grid-column: 2; grid-row: 1; text-align: left; padding-left: 1rem; padding-right: 0; }
   .tl-empty { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item.is-visible .tl-dot {
+    animation: none;
+  }
 }
