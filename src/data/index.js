@@ -8,7 +8,7 @@ export const EVENTS = [
     dept: 'Undergraduate Competition',
     name: 'Agentic AI Challenge',
     desc: 'Build an AI system that detects social engineering attempts, explains risk factors, and suggests safe responses while learning from feedback.',
-    tag: 'Team · 2–4 Members',
+    tag: '4 Member Team',
   },
   {
     dept: 'Stage 1',
@@ -45,12 +45,12 @@ export const EVENTS = [
 // ── TIMELINE ─────────────────────────────────────────────────────────────────
 export const TIMELINE = [
   {
-    date: 'May 2',
+    date: 'May 4',
     title: 'Open Registrations',
     desc: 'Registrations open for all Sri Lankan undergraduates and A/L students interested in participating in Aurora 2026.',
   },
   {
-    date: 'May 16',
+    date: 'May 11',
     title: 'Closing Registrations & Proposal Deadline',
     desc: 'Deadline for undergraduates to register and submit their project proposals for Aurora 2026.',
   },
@@ -152,7 +152,7 @@ export const FAQS = [
   },
   {
     q: 'When does registration open and close?',
-    a: 'Registrations open on April 27, 2026. The deadline for undergraduates to register and submit proposals is May 9, 2026. School student registrations close on June 20, 2026.',
+    a: 'Registrations open on May 4, 2026. The deadline for undergraduates to register and submit proposals is May 11, 2026. School student registrations close on June 20, 2026.',
   },
   {
     q: 'What should I bring on competition day?',
@@ -164,7 +164,7 @@ export const FAQS = [
   },
   {
     q: 'Where is Aurora 2026 being held?',
-    a: 'Aurora 2026 is organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura. Venue details will be confirmed and shared with registered participants.',
+    a: 'Aurora 2026 is organized by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura. Venue details will be confirmed and shared with registered participants.',
   },
 ]
 
