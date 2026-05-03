@@ -52,8 +52,9 @@ function Committee() {
                   </div>
                 </div>
                 <span className="head-role">{h.role}</span>
-                <div className="head-name">{h.name}</div>
                 <div className="head-dept">{h.dept}</div>
+                <div className="head-name">{h.name}</div>
+                <div className="head-email">{h.email}</div>
               </div>
             ))}
           </div>

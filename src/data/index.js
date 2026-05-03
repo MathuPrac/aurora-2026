@@ -19,7 +19,7 @@ export const EVENTS = [
   {
     dept: 'Stage 2',
     name: 'Selection of Final Teams',
-    desc: 'Top 6 proposals selected based on Innovation (30%), Technical Feasibility (30%), Ethical Compliance (25%), and Impact & Presentation (15%).',
+    desc: 'Top 8 proposals selected based on Innovation, Technical Feasibility, Ethical Compliance, and Impact & Presentation.',
     tag: 'Undergraduate',
   },
   {
@@ -47,42 +47,57 @@ export const TIMELINE = [
   {
     date: 'May 4',
     title: 'Open Registrations',
-    desc: 'Registrations open for all Sri Lankan undergraduates and A/L students interested in participating in Aurora 2026.',
+    desc: 'Registrations open for undergraduates to participate in Aurora 2026.',
   },
   {
-    date: 'May 11',
-    title: 'Closing Registrations & Proposal Deadline',
-    desc: 'Deadline for undergraduates to register and submit their project proposals for Aurora 2026.',
+    date: 'May 9',
+    title: 'Closing Registrations',
+    desc: 'Final deadline for undergraduates to register for Aurora 2026.',
   },
   {
-    date: 'May 23',
+    date: 'May 10',
+    title: 'Open Proposal Submission',
+    desc: 'Undergraduate participants can now submit their 5–8 page project proposals.',
+  },
+  {
+    date: 'May 14',
+    title: 'Closing Proposal Submission',
+    desc: 'Deadline for undergraduates to submit their project proposals for Aurora 2026.',
+  },
+  {
+    date: 'May 18',
     title: 'Start of Implementation Phase',
-    desc: 'The first 6 selected proposals advance to the implementation phase. Undergraduate participants begin building their projects.',
+    desc: 'The first 6 selected proposals advance to the implementation phase. Participants begin building their projects.',
   },
   {
     date: 'Jun 13',
+    title: 'Open Registrations for School Students',
+    desc: 'Registration window opens for school student participants in Aurora 2026.',
+  },
+  {
+    date: 'Jun 20',
     title: 'Closing Registrations for School Students',
     desc: 'Final deadline for school students to register for participation in Aurora 2026.',
   },
   {
-    date: 'Jun 20',
+    date: 'Jun 27',
     title: 'Implementation Closing — Undergraduates',
     desc: 'Deadline for completion of projects by undergraduate participants.',
   },
   {
-    date: 'Jun 25',
+    date: 'Jul 2',
     title: 'School Students Awareness Session',
     desc: 'Session dedicated to school student participants covering Agentic AI and Social Engineering.',
   },
   {
-    date: 'Jun 27',
+    date: 'Jul 4',
     title: 'Final Competition — Undergraduates',
     desc: 'Undergraduate teams present their developed projects to a panel of industry experts.',
   },
   {
-    date: 'Jul 01',
-    title: 'School Competition Day',
-    desc: 'Competition session dedicated exclusively to school student participants.',
+    date: 'Jul 7',
+    title: 'School Competition',
+    desc: 'Competition session including workshop, quiz, and creative idea design for school students.',
   },
   {
     date: 'Jul 18',
@@ -122,10 +137,10 @@ export const COMMITTEES = [
     label: 'Executive Committee',
     color: '#F05023',
     heads: [
-      { name: 'Elangeswaran Kishor', role: 'CSA President', dept: 'elangeswarankishor@gmail.com', img: '/photos/Kishor.png' },
-      { name: 'Sachith Wickramarachchi', role: 'Co-chief Organizer', dept: 'sachithpramuditha2003@gmail.com', img: '/photos/Sachith.jpeg' },
-      { name: 'Chamod Devranga', role: 'Co-chief Organizer', dept: 'cdevranga@gmail.com', img: '/photos/Chamod.jpeg' },
-      { name: 'Rusira Sandul', role: 'Treasurer', dept: 'rusirasandulhw@gmail.com', img: '/photos/Rusira.jpeg' },
+      { name: 'Elangeswaran Kishor', role: 'President', dept: 'Computer Science Association', email: 'elangeswarankishor@gmail.com', img: '/photos/Kishor.png' },
+      { name: 'Sachith Wickramarachchi', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'sachithpramuditha2003@gmail.com', img: '/photos/Sachith.jpeg' },
+      { name: 'Chamod Devranga', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'cdevranga@gmail.com', img: '/photos/Chamod.jpeg' },
+      { name: 'Rusira Sandul', role: 'Treasurer', dept: 'Aurora 2026', email: 'rusirasandulhw@gmail.com', img: '/photos/Rusira.jpeg' },
     ],
     members: [],
   },
