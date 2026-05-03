@@ -62,7 +62,7 @@ function Events() {
             {schoolComps.map(e => (
               <div key={e.name} className="event-card">
                 <div className="event-card-glow" />
-                <span className="event-dept">{e.dept}</span>
+                
                 <h3>{e.name}</h3>
                 <p>{e.desc}</p>
                 <span className="event-tag">{e.tag}</span>

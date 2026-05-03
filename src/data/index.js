@@ -32,13 +32,13 @@ export const EVENTS = [
     dept: 'School Competition',
     name: 'Workshop & Quiz',
     desc: 'An interactive workshop on Agentic AI and Social Engineering followed by a quiz covering Technical Skills, Ethical Knowledge, and Creative Solutions.',
-    tag: 'School Students',
+    tag: 'School Competition',
   },
   {
     dept: 'School Competition',
     name: 'Creative Idea Design',
     desc: 'Design a creative and innovative idea related to Agentic AI and Social Engineering. Scored on Technical Feasibility (40), Ethical Compliance (30), and Innovation (30).',
-    tag: 'School Students',
+    tag: 'School Competition',
   },
 ]
 
