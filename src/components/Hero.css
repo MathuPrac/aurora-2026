@@ -34,8 +34,8 @@
 
 .hero-aurora-outline {
   position: absolute; top: 2%; left: 50%; transform: translateX(-50%);
-  height: 300px; width: auto; z-index: 4; opacity: 2;
-  pointer-events: none;
+  height: 300px; width: auto; z-index: 4; opacity: 0.15;
+  pointer-events: none; max-width: 120%; overflow: hidden;
 }
 .hero-eyebrow {
   display: none;
@@ -82,10 +82,10 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 0;
-    height: auto;
-    justify-content: flex-start;
-    padding: 6.5rem 1.2rem 1.5rem;
+    min-height: 100vh;
+    height: 100vh;
+    justify-content: center;
+    padding: 5rem 1.2rem 1.5rem;
   }
 
   .hero-video {
@@ -104,9 +104,10 @@
   }
 
   .hero-aurora-outline {
-    top: 5%;
-    height: 170px;
-    opacity: 0.9;
+    top: 8%;
+    height: 150px;
+    opacity: 0.1;
+    max-width: 100%;
   }
 
   .hero-title {
@@ -147,9 +148,9 @@
 
 @media (max-width: 600px) {
   .hero {
-    min-height: 0;
-    height: auto;
-    padding: 6rem 1rem 1.3rem;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 5rem 1rem 1.3rem;
   }
 
   .hero-video {
@@ -159,12 +160,14 @@
   }
 
   .hero-aurora-outline {
-    top: 6%;
-    height: 145px;
+    top: 8%;
+    height: 130px;
+    opacity: 0.1;
+    max-width: 100%;
   }
 
   .hero-title {
-    margin-top: 7rem;
+    margin-top: 6.5rem;
     font-size: clamp(1.45rem, 8.8vw, 2rem);
   }
 
