@@ -4,8 +4,8 @@ import './Navbar.css'
 const NAV_LINKS = [
   ['About', '#about'],
   ['Gallery', '#gallery'],
+  ['Competition', '#guidelines'],
   ['Committee', '#committee'],
-  ['Guidelines', '#guidelines'],
   ['FAQ', '#faq'],
 ]
 

@@ -35,11 +35,6 @@ function Footer() {
         <div className="footer-copy">
           © 2026 Aurora — Conference on Computer Science · CSA, University of Sri Jayewardenepura
         </div>
-        <div className="footer-policies">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookies Policy</a>
-        </div>
       </div>
     </footer>
   )
