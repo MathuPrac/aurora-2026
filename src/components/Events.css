@@ -22,7 +22,7 @@
 }
 
 .main-card {
-  background: linear-gradient(135deg, rgba(180, 90, 20, 0.95), rgba(200, 120, 30, 0.95)) !important;
+  background: linear-gradient(135deg, rgba(219, 131, 63, 0.95), rgba(234, 98, 29, 0.95)) !important;
   border: 2px solid rgba(255, 176, 124, 0.5) !important;
   box-shadow: 0 0 40px rgba(240, 80, 35, 0.25);
   text-align: center;
@@ -40,7 +40,7 @@
 
 .main-card h3 {
   font-size: 1.2rem !important;
-  color: #000000 !important;
+  color: #a13701 !important;
 }
 
 .main-card .event-tag {
