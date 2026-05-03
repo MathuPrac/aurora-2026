@@ -20,7 +20,7 @@ function Hero() {
       <div className="hero-bg" />
       <div className="hero-grid" />
       <div className="aurora-glow" />
-      <img src="/photos/aurora'26_outline.png" alt="Aurora outline" className="hero-aurora-outline" />
+      <img src="/logo.png" alt="Aurora outline" className="hero-aurora-outline" />
 
       <h1 className="hero-title">
        Step Into the Future.<br />Compete With the Best
