@@ -81,7 +81,7 @@ export const TIMELINE = [
   },
   {
     date: 'Jun 27',
-    title: 'Implementation Closing — Undergraduates',
+    title: 'Implementation Closing - Undergraduates',
     desc: 'Deadline for completion of projects by undergraduate participants.',
   },
   {
@@ -91,7 +91,7 @@ export const TIMELINE = [
   },
   {
     date: 'Jul 4',
-    title: 'Final Competition — Undergraduates',
+    title: 'Final Competition - Undergraduates',
     desc: 'Undergraduate teams present their developed projects to a panel of industry experts.',
   },
   {
@@ -122,10 +122,10 @@ export const GUIDELINES = {
   ],
   conduct: [
     'All solutions must be developed during the designated competition period',
-    'Undergraduate proposals must be original work — plagiarism leads to disqualification',
+    'Undergraduate proposals must be original work - plagiarism leads to disqualification',
     'Code repositories must be accessible via GitHub or GitLab for evaluation',
     "Judges' decisions are final and binding in all matters",
-    'Ethical AI principles must be respected — misuse prevention must be demonstrated',
+    'Ethical AI principles must be respected - misuse prevention must be demonstrated',
     'Professional conduct is expected from all participants throughout the event',
   ],
 }
