@@ -25,12 +25,10 @@ function Navbar() {
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-      <div>
-        <a href="#hero" className="nav-logo">
+      <a href="#hero" className="nav-logo">
         <img src="/logo.png" alt="Aurora Logo" />
         <span className="nav-logo-text">AURORA</span>
       </a>
-      </div>
 
       <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
@@ -38,20 +36,22 @@ function Navbar() {
         ))}
       </ul>
 
-      <a
-        href={registerCta.href}
-        className={`nav-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
-        onClick={(event) => {
-          registerCta.onClick(event)
-          if (registerCta.isOpen) {
-            setMenuOpen(false)
-          }
-        }}
-        aria-disabled={registerCta['aria-disabled']}
-        tabIndex={registerCta.tabIndex}
-      >
-        {registerCta.label}
-      </a>
+      <div className="nav-right-section">
+        <a
+          href={registerCta.href}
+          className={`nav-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
+          onClick={(event) => {
+            registerCta.onClick(event)
+            if (registerCta.isOpen) {
+              setMenuOpen(false)
+            }
+          }}
+          aria-disabled={registerCta['aria-disabled']}
+          tabIndex={registerCta.tabIndex}
+        >
+          {registerCta.label}
+        </a>
+      </div>
 
       <button className="nav-hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
         <span /><span /><span />
