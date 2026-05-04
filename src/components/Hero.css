@@ -34,7 +34,7 @@
 
 .hero-aurora-outline {
   position: absolute; top: 14%; left: 50%; transform: translateX(-50%);
-  height: 110px; width: auto; z-index: 4; 
+  height: 150px; width: auto; z-index: 4; 
   pointer-events: none; max-width: 120%; overflow: hidden;
 }
 .hero-eyebrow {
