@@ -17,7 +17,7 @@ function About() {
           <div className="about-text">
             <h3>What is Aurora?</h3>
             <p>Aurora is the annual Conference on Computer Science organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura.</p>
-            <p>Aurora 2026 focuses on <strong>Agentic AI and Social Engineering</strong> — exploring how autonomous AI systems intersect with human behaviour, security, and ethical responsibility in modern computing.</p>
+            <p>Aurora 2026 focuses on <strong>Agentic AI and Social Engineering</strong>{" "}exploring how autonomous AI systems intersect with human behaviour, security, and ethical responsibility in modern computing.</p>
             <p>The event comprises two key segments: <strong>The Conference</strong> featuring keynote speeches, expert panels, and workshops; and <strong>The Competition</strong>, challenging participants to apply knowledge in innovative, time-bound scenarios.</p>
             <div className="about-stats">
               {[['6+', 'Editions'], ['500+', 'Past Competitors'], ['10+', 'Industry Partners']].map(([n, l]) => (
