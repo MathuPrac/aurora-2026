@@ -2,22 +2,29 @@
   position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 4rem; height: 85px;
-  background: transparent;
+  /* background-color:linear-gradient(rgba(8, 10, 14, 0.72)); */
+  background: linear-gradient(90deg, transparent, #F05023, #FAA967, #F26A31, transparent);
+  /* background: transparent; */
   border-bottom: 1px solid transparent;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   transition: box-shadow 0.3s;
 }
-.navbar--scrolled { box-shadow: none; background: transparent; }
+.navbar--scrolled { box-shadow: none;  }
+
+.nav-brand-div{
+
+  background-color: rgba(240, 80, 35, 0.28);
+}
 
 .nav-logo {
   display: flex; align-items: center; gap: 0.3rem; text-decoration: none; flex-shrink: 0;
 }
 .nav-logo-text {
   font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700;
-  color: white !important; letter-spacing: 0.08em;
+  color: black !important; letter-spacing: 0.08em;
 }
-.nav-logo img { height: 40px; width: auto; }
+.nav-logo img { height: 60px; width: auto; }
 
 .nav-links { 
   display: flex; gap: 2.5rem; list-style: none; transition: all 0.4s ease;
@@ -65,7 +72,7 @@
 }
 
 .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; transition: all 0.3s; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: black; border-radius: 2px; transition: all 0.3s; }
 
 @media (max-width: 960px) {
   .navbar { padding: 0 1.5rem; }
