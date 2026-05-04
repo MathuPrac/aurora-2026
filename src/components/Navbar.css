@@ -261,6 +261,7 @@
   .nav-cta {
     padding: 0.6rem 1rem;
     font-size: 0.75rem;
+    display: none;
   }
 
   .nav-hamburger {
