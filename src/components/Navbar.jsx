@@ -25,10 +25,12 @@ function Navbar() {
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-      <a href="#hero" className="nav-logo">
+      <div>
+        <a href="#hero" className="nav-logo">
         <img src="/logo.png" alt="Aurora Logo" />
         <span className="nav-logo-text">AURORA</span>
       </a>
+      </div>
 
       <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
