@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="/logo1.png" alt="Aurora Logo" />
+            <img src="/logo.png" alt="Aurora Logo" />
           </div>
           <div className="footer-description">
             Annual Conference on Computer Science organised by the Computer Science Association in collaboration with the Department of Computer Science, University of Sri Jayewardenepura.
