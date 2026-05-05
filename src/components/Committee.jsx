@@ -44,12 +44,27 @@ function Committee() {
               <div key={i} className="head-card">
                 <div className="head-avatar-wrap">
                   <div className="head-avatar-ring" style={{ background: `conic-gradient(${current.color}, var(--gold-light), ${current.color})` }} />
-                  <div className="head-avatar">
-                    {h.img
-                      ? <img src={h.img} alt={h.name} />
-                      : <div className="head-avatar-placeholder"><span>👤</span><span>Photo</span></div>
-                    }
-                  </div>
+                  {h.linkedin ? (
+                    <a
+                      href={h.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="head-avatar head-avatar--link"
+                      aria-label={`${h.name} on LinkedIn`}
+                    >
+                      {h.img
+                        ? <img src={h.img} alt={h.name} />
+                        : <div className="head-avatar-placeholder"><span>👤</span><span>Photo</span></div>
+                      }
+                    </a>
+                  ) : (
+                    <div className="head-avatar">
+                      {h.img
+                        ? <img src={h.img} alt={h.name} />
+                        : <div className="head-avatar-placeholder"><span>👤</span><span>Photo</span></div>
+                      }
+                    </div>
+                  )}
                 </div>
                 <span className="head-role">{h.role}</span>
                 <div className="head-dept">{h.dept}</div>

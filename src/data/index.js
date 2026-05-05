@@ -1,5 +1,4 @@
 
-
 // ── Aurora'26 — All site content (edit here only) ────────────────────────────
 
 // ── EVENTS / Competition Tracks ───────────────────────────────────────────────
@@ -107,9 +106,6 @@ export const TIMELINE = [
 ]
 
 
-
-
-
 // ── GUIDELINES ───────────────────────────────────────────────────────────────
 export const GUIDELINES = {
   eligibility: [
@@ -137,10 +133,10 @@ export const COMMITTEES = [
     label: 'Executive Committee',
     color: '#F05023',
     heads: [
-      { name: 'Elangeswaran Kishor', role: 'President', dept: 'Computer Science Association', email: 'elangeswarankishor@gmail.com', img: '/photos/Kishor.png' },
-      { name: 'Sachith Wickramarachchi', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'sachithpramuditha2003@gmail.com', img: '/photos/Sachith.jpeg' },
-      { name: 'Chamod Devranga', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'cdevranga@gmail.com', img: '/photos/Chamod.jpeg' },
-      { name: 'Rusira Sandul', role: 'Treasurer', dept: 'Aurora 2026', email: 'rusirasandulhw@gmail.com', img: '/photos/Rusira.jpeg' },
+      { name: 'Elangeswaran Kishor', role: 'President', dept: 'Computer Science Association', email: 'elangeswarankishor@gmail.com', img: '/photos/Kishor.png', linkedin: 'https://www.linkedin.com/in/kishor-elangeswaran-2505a924a/' },
+      { name: 'Sachith Wickramarachchi', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'sachithpramuditha2003@gmail.com', img: '/photos/Sachith.jpeg', linkedin: 'https://www.linkedin.com/in/sachith-wickramarachchi-a76aa6328/' },
+      { name: 'Chamod Devranga', role: 'Co-chief Organizer', dept: 'Aurora 2026', email: 'cdevranga@gmail.com', img: '/photos/Chamod.jpeg', linkedin: 'https://www.linkedin.com/in/chamod-devranga-5b556a268/' },
+      { name: 'Rusira Sandul', role: 'Treasurer', dept: 'Aurora 2026', email: 'rusirasandulhw@gmail.com', img: '/photos/Rusira.jpeg', linkedin: 'https://www.linkedin.com/in/rusira-sandul-b6bb87292/' },
     ],
     members: [],
   },
