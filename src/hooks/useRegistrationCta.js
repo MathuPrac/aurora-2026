@@ -16,7 +16,7 @@ export function useRegistrationCta() {
     const distance = REGISTRATION_OPEN_AT - Date.now()
 
     if (distance <= 0) {
-      return { isOpen: true, label: 'REGISTER NOW', href: REGISTRATION_URL }
+      return { isOpen: false, label: 'REGISTRATION CLOSED', href: '#register' }
     }
 
     return { isOpen: false, label: `REGISTER IN ${formatCountdown(distance)}`, href: '#register' }
