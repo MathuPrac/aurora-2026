@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 
 export const REGISTRATION_OPEN_AT = new Date('2026-05-04T19:00:00+05:30').getTime()
-export const REGISTRATION_URL = 'https://forms.gle/8KB598bbk6zDMwDi9'
+export const REGISTRATION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
 
 function formatCountdown(distance) {
   const hours = Math.floor(distance / (1000 * 60 * 60))
@@ -16,7 +16,7 @@ export function useRegistrationCta() {
     const distance = REGISTRATION_OPEN_AT - Date.now()
 
     if (distance <= 0) {
-      return { isOpen: false, label: 'REGISTRATION CLOSED', href: '#register' }
+      return { isOpen: true, label: 'PROPOSAL SUBMISSION OPEN', href: REGISTRATION_URL }
     }
 
     return { isOpen: false, label: `REGISTER IN ${formatCountdown(distance)}`, href: '#register' }
