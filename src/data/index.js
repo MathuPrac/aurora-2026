@@ -11,7 +11,7 @@ export const EVENTS = [
   },
   {
     dept: 'Stage 1',
-    name: 'Proposal Submission',
+    name: 'Implementation Submission Started',
     desc: 'Submit a 5–8 page PDF covering Problem Statement, Agentic AI Architecture, Ethical Safeguards, and Expected Impact.',
     tag: 'Undergraduate',
   },
@@ -55,12 +55,12 @@ export const TIMELINE = [
   },
   {
     date: 'May 10',
-    title: 'Open Proposal Submission',
+    title: 'Implementation Submission Started',
     desc: 'Undergraduate participants can now submit their 5–8 page project proposals.',
   },
   {
     date: 'May 14',
-    title: 'Closing Proposal Submission',
+    title: 'Implementation Submission Started',
     desc: 'Deadline for undergraduates to submit their project proposals for Aurora 2026.',
   },
   {
@@ -155,7 +155,7 @@ export const FAQS = [
   },
   {
     q: 'How many stages are in the undergraduate competition?',
-    a: 'There are four stages: Stage 1 — Proposal Submission (5–8 page PDF), Stage 2 — Selection of Final 6 Teams, Stage 3 — Prototype & Evaluation Report Submission (with GitHub repo and demo video), and Stage 4 — Final Live Presentation and Q&A.',
+    a: 'There are four stages: Stage 1 — Implementation Submission Started (5–8 page PDF), Stage 2 — Selection of Final 6 Teams, Stage 3 — Prototype & Evaluation Report Submission (with GitHub repo and demo video), and Stage 4 — Final Live Presentation and Q&A.',
   },
   {
     q: 'What does the school student competition involve?',

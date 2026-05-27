@@ -6,7 +6,7 @@ function FAQ() {
   const [open, setOpen] = useState(null)
   
   const stages = [
-    { number: '1', title: 'Proposal Submission', desc: '5–8 page PDF' },
+    { number: '1', title: 'Implementation Submission Started', desc: '5–8 page PDF' },
     { number: '2', title: 'Selection of Final 6 Teams', desc: 'Based on criteria' },
     { number: '3', title: 'Prototype & Evaluation', desc: 'GitHub + Demo video' },
     { number: '4', title: 'Final Presentation', desc: 'Live Q&A' },
