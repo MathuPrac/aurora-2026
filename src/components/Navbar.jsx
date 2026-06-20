@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useRegistrationCta } from '../hooks/useRegistrationCta'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -13,7 +12,6 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const registerCta = useRegistrationCta()
 
   useEffect(() => {
     const onScroll = () => {
@@ -34,22 +32,18 @@ function Navbar() {
         {NAV_LINKS.map(([label, href]) => (
           <li key={label}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
         ))}
+        <li className="nav-links-register">
+          <a href="#register" onClick={() => setMenuOpen(false)}>Register</a>
+        </li>
       </ul>
 
       <div className="nav-right-section">
         <a
-          href={registerCta.href}
-          className={`nav-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
-          onClick={(event) => {
-            registerCta.onClick(event)
-            if (registerCta.isOpen) {
-              setMenuOpen(false)
-            }
-          }}
-          aria-disabled={registerCta['aria-disabled']}
-          tabIndex={registerCta.tabIndex}
+          href="#register"
+          className="nav-cta"
+          onClick={() => setMenuOpen(false)}
         >
-          {registerCta.label}
+          Register
         </a>
       </div>
 

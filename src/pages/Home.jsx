@@ -7,7 +7,7 @@ import Gallery     from '../components/Gallery'
 import Guidelines  from '../components/Guidelines'
 import Committee   from '../components/Committee'
 import FAQ         from '../components/FAQ'
-// import Register    from '../components/Register'
+import Register    from '../components/Register'
 
 function Home() {
   return (
@@ -21,7 +21,7 @@ function Home() {
       {/* <Departments /> */}
       <Committee />
       <FAQ />
-      {/* <Register /> */}
+      <Register />
     </main>
   )
 }

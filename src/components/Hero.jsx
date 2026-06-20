@@ -1,10 +1,34 @@
 import { useEffect, useRef } from 'react'
-import { useRegistrationCta } from '../hooks/useRegistrationCta'
+import { useImplementationCta, useSchoolRegistrationCta } from '../hooks/useRegistrationCta'
 import './Hero.css'
+
+function RegistrationCard({ badge, title, desc, audience, cta, variant }) {
+  return (
+    <article className={`hero-reg-card hero-reg-card--${variant}${cta.isOpen ? ' is-open' : ''}${cta.isClosed ? ' is-closed' : ''}`}>
+      <span className="hero-reg-badge">{badge}</span>
+      <h3 className="hero-reg-title">{title}</h3>
+      <p className="hero-reg-desc">{desc}</p>
+      <span className="hero-reg-audience">{audience}</span>
+      <a
+        href={cta.href}
+        className={`hero-reg-btn${cta.isOpen ? ' is-active' : ' is-disabled'}`}
+        onClick={cta.onClick}
+        aria-disabled={cta['aria-disabled']}
+        tabIndex={cta.tabIndex}
+        target={cta.isOpen ? '_blank' : undefined}
+        rel={cta.isOpen ? 'noopener noreferrer' : undefined}
+      >
+        {cta.label}
+        {cta.isOpen && <span className="hero-reg-btn-arrow" aria-hidden="true">→</span>}
+      </a>
+    </article>
+  )
+}
 
 function Hero() {
   const videoRef = useRef(null)
-  const registerCta = useRegistrationCta()
+  const implementationCta = useImplementationCta()
+  const schoolCta = useSchoolRegistrationCta()
 
   useEffect(() => {
     if (videoRef.current) {
@@ -22,26 +46,42 @@ function Hero() {
       <div className="aurora-glow" />
       <img src="/logo1.png" alt="Aurora outline" className="hero-aurora-outline" />
 
+      <p className="hero-eyebrow">Aurora &apos;26 · University of Sri Jayewardenepura</p>
+
       <h1 className="hero-title">
-       Step Into the Future.<br />Compete With the Best
+        Agentic AI.<br />
+        <span className="hero-title-accent">Real Impact.</span>
       </h1>
 
       <p className="hero-subtitle">
-Join researchers, innovators, and future tech leaders for an immersive experience featuring visionary keynote speeches, expert-led panels, hands-on workshops, and an exciting competition designed to challenge creativity, strategy, and technical excellence.</p>
+        Sri Lanka&apos;s premier computing conference and competition — explore autonomous AI,
+        social engineering defence, and ethical innovation through keynotes, workshops, and live challenges.
+      </p>
 
-      <p className="hero-tagline">Compete in Sri Lanka's premier university computing competition.</p>
+      <div className="hero-registrations">
+        <p className="hero-registrations-label">Choose your path</p>
+        <div className="hero-reg-grid">
+          <RegistrationCard
+            variant="undergrad"
+            badge="Undergraduate"
+            title="Agentic AI Challenge"
+            desc="4-member teams · Submit proposals, build prototypes, and compete for top honours."
+            audience="Open to university undergraduates"
+            cta={implementationCta}
+          />
+          <RegistrationCard
+            variant="school"
+            badge="School Students"
+            title="Workshop & Creative Design"
+            desc="Interactive workshops, quizzes, and creative idea design for  students."
+            audience="Open to school students"
+            cta={schoolCta}
+          />
+        </div>
+      </div>
 
       <div className="hero-buttons">
-        <a
-          href={registerCta.href}
-          className={`btn-primary hero-register-cta${registerCta.isOpen ? ' is-active' : ' is-disabled'}`}
-          onClick={registerCta.onClick}
-          aria-disabled={registerCta['aria-disabled']}
-          tabIndex={registerCta.tabIndex}
-        >
-          {registerCta.label}
-        </a>
-        <a href="#about" className="btn-secondary">See Details</a>
+        <a href="#about" className="btn-secondary hero-details-btn">Explore the Event</a>
       </div>
 
       <div className="hero-scroll">
