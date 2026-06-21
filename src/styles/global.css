@@ -34,6 +34,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
 body::before {
   content: '';
   position: fixed; inset: 0;

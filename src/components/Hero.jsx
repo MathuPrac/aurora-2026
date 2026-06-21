@@ -11,7 +11,7 @@ function RegistrationCard({ badge, title, desc, audience, cta, variant }) {
       <span className="hero-reg-audience">{audience}</span>
       <a
         href={cta.href}
-        className={`hero-reg-btn${cta.isOpen ? ' is-active' : ' is-disabled'}`}
+        className={`hero-reg-btn hero-reg-btn--${variant}${cta.isOpen ? ' is-active' : ' is-disabled'}`}
         onClick={cta.onClick}
         aria-disabled={cta['aria-disabled']}
         tabIndex={cta.tabIndex}

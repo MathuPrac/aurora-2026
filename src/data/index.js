@@ -41,67 +41,111 @@ export const EVENTS = [
   },
 ]
 
+// ── REGISTRATION URLS ────────────────────────────────────────────────────────
+export const UNDERGRAD_REGISTRATION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
+export const PROPOSAL_SUBMISSION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
+export const SCHOOL_REGISTRATION_URL = 'https://forms.gle/76HahruTXmjLPwdq6'
+
+/** Set to false when you want to close school registration */
+export const SCHOOL_REGISTRATION_FORCE_OPEN = true
+
 // ── TIMELINE ─────────────────────────────────────────────────────────────────
 export const TIMELINE = [
   {
-    date: 'May 4',
-    title: 'Open Registrations',
-    desc: 'Registrations open for undergraduates to participate in Aurora 2026.',
+    date: 'May 04',
+    day: 'Monday',
+    title: 'Open Registration',
+    desc: 'Undergraduate team registration opens for Aurora 2026.',
+    duration: '5 days',
+    track: 'undergraduate',
+    link: UNDERGRAD_REGISTRATION_URL,
+    linkLabel: 'Register Now',
   },
   {
-    date: 'May 9',
-    title: 'Closing Registrations',
-    desc: 'Final deadline for undergraduates to register for Aurora 2026.',
+    date: 'May 09',
+    day: 'Monday',
+    title: 'Closing Registration',
+    desc: 'Final deadline for undergraduate teams to register.',
+    track: 'undergraduate',
   },
   {
     date: 'May 10',
-    title: 'Implementation Submission Started',
-    desc: 'Undergraduate participants can now submit their 5–8 page project proposals.',
+    day: 'Tuesday',
+    title: 'Open Proposal Submission',
+    desc: 'Undergraduate participants can submit their 5–8 page project proposals.',
+    duration: '5 days',
+    track: 'undergraduate',
+    link: PROPOSAL_SUBMISSION_URL,
+    linkLabel: 'Submit Proposal',
   },
   {
     date: 'May 14',
-    title: 'Implementation Submission Started',
-    desc: 'Deadline for undergraduates to submit their project proposals for Aurora 2026.',
+    day: 'Saturday',
+    title: 'Closing Proposal Submission',
+    desc: 'Deadline for undergraduates to submit project proposals for Aurora 2026.',
+    track: 'undergraduate',
   },
   {
     date: 'May 18',
-    title: 'Start of Implementation Phase',
-    desc: 'The first 6 selected proposals advance to the implementation phase. Participants begin building their projects.',
+    day: 'Monday',
+    title: 'Starting Implementation',
+    desc: 'Selected proposals advance to the implementation phase. Teams begin building their projects.',
+    duration: '40 days',
+    track: 'undergraduate',
   },
   {
-    date: 'Jun 13',
-    title: 'Open Registrations for School Students',
-    desc: 'Registration window opens for school student participants in Aurora 2026.',
-  },
-  {
-    date: 'Jun 20',
-    title: 'Closing Registrations for School Students',
-    desc: 'Final deadline for school students to register for participation in Aurora 2026.',
+    date: 'Jun 24',
+    day: 'Wednesday',
+    title: 'Registration Open for School Students',
+    desc: 'Registration window opens for school teams participating in Aurora 2026.',
+    track: 'school',
+    link: SCHOOL_REGISTRATION_URL,
+    linkLabel: 'Register School Team',
   },
   {
     date: 'Jun 27',
-    title: 'Implementation Closing - Undergraduates',
-    desc: 'Deadline for completion of projects by undergraduate participants.',
+    day: 'Saturday',
+    title: 'Implementation Closing — Undergraduates',
+    desc: 'Deadline for undergraduate teams to complete and submit their implementation work.',
+    track: 'undergraduate',
   },
   {
-    date: 'Jul 2',
+    date: 'Jun 30',
+    day: 'Tuesday',
+    title: 'Closing Registration for School Students',
+    desc: 'Final deadline for school students to register for participation in Aurora 2026.',
+    track: 'school',
+    link: SCHOOL_REGISTRATION_URL,
+    linkLabel: 'Register School Team',
+  },
+  {
+    date: 'Jul 02',
+    day: 'Thursday',
     title: 'School Students Awareness Session',
-    desc: 'Session dedicated to school student participants covering Agentic AI and Social Engineering.',
+    desc: 'Compulsory awareness session for school participants covering Agentic AI and Social Engineering.',
+    duration: '2 days',
+    track: 'school',
   },
   {
-    date: 'Jul 4',
-    title: 'Final Competition - Undergraduates',
+    date: 'Jul 04',
+    day: 'Saturday',
+    title: 'Final Competition — Undergraduates',
     desc: 'Undergraduate teams present their developed projects to a panel of industry experts.',
+    track: 'undergraduate',
   },
   {
-    date: 'Jul 7',
+    date: 'Jul 10',
+    day: 'Friday',
     title: 'School Competition',
-    desc: 'Competition session including workshop, quiz, and creative idea design for school students.',
+    desc: 'Workshop, quiz, and creative idea design challenges for school student participants.',
+    track: 'school',
   },
   {
     date: 'Jul 18',
+    day: 'Saturday',
     title: 'Conference Day',
-    desc: 'The eagerly anticipated conference day centred around the themes of Agentic AI & Social Engineering.',
+    desc: 'The eagerly anticipated conference day centred around Agentic AI & Social Engineering.',
+    track: 'conference',
   },
 ]
 
@@ -163,7 +207,7 @@ export const FAQS = [
   },
   {
     q: 'When does registration open and close?',
-    a: 'Registrations open on May 4, 2026. The deadline for undergraduates to register and submit proposals is May 11, 2026. School student registrations close on June 20, 2026.',
+    a: 'Undergraduate registration opens May 4 and closes May 9, 2026. Proposal submissions are accepted May 10–14. School student registration opens June 24 and closes June 30, 2026.',
   },
   {
     q: 'What should I bring on competition day?',

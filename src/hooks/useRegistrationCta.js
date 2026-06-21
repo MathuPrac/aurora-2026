@@ -1,11 +1,18 @@
 import { useEffect, useMemo, useState } from 'react'
+import {
+  UNDERGRAD_REGISTRATION_URL,
+  PROPOSAL_SUBMISSION_URL,
+  SCHOOL_REGISTRATION_URL,
+  SCHOOL_REGISTRATION_FORCE_OPEN,
+} from '../data'
 
 export const IMPLEMENTATION_OPEN_AT = new Date('2026-05-04T19:00:00+05:30').getTime()
-export const IMPLEMENTATION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
+export const IMPLEMENTATION_URL = PROPOSAL_SUBMISSION_URL
 
-export const SCHOOL_REGISTRATION_OPEN_AT = new Date('2026-06-13T00:00:00+05:30').getTime()
-export const SCHOOL_REGISTRATION_CLOSE_AT = new Date('2026-06-20T23:59:59+05:30').getTime()
-export const SCHOOL_REGISTRATION_URL = 'https://forms.gle/76HahruTXmjLPwdq6'
+export const SCHOOL_REGISTRATION_OPEN_AT = new Date('2026-06-24T00:00:00+05:30').getTime()
+export const SCHOOL_REGISTRATION_CLOSE_AT = new Date('2026-06-30T23:59:59+05:30').getTime()
+
+export { UNDERGRAD_REGISTRATION_URL, PROPOSAL_SUBMISSION_URL, SCHOOL_REGISTRATION_URL, SCHOOL_REGISTRATION_FORCE_OPEN }
 
 function formatCountdown(distance) {
   const hours = Math.floor(distance / (1000 * 60 * 60))
@@ -15,7 +22,11 @@ function formatCountdown(distance) {
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
 }
 
-function computeTimedState({ openAt, closeAt, openLabel, countdownPrefix, closedLabel, url, anchorWhenClosed }) {
+function computeTimedState({ openAt, closeAt, openLabel, countdownPrefix, closedLabel, url, anchorWhenClosed, forceOpen }) {
+  if (forceOpen) {
+    return { isOpen: true, isClosed: false, label: openLabel, href: url }
+  }
+
   const now = Date.now()
 
   if (closeAt && now > closeAt) {
@@ -42,6 +53,11 @@ function useTimedRegistrationCta(config) {
   const [state, setState] = useState(computeState)
 
   useEffect(() => {
+    if (config.forceOpen) {
+      setState(computeState())
+      return undefined
+    }
+
     const timer = setInterval(() => setState(computeState()), 1000)
     setState(computeState())
     return () => clearInterval(timer)
@@ -79,6 +95,7 @@ export function useSchoolRegistrationCta() {
     closedLabel: 'REGISTRATION CLOSED',
     url: SCHOOL_REGISTRATION_URL,
     anchorWhenClosed: '#register',
+    forceOpen: SCHOOL_REGISTRATION_FORCE_OPEN,
   })
 }
 

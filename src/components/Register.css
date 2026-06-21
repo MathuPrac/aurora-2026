@@ -208,7 +208,7 @@
 
 @media (max-width: 768px) {
   .register-inner {
-    padding: 4rem 1.2rem;
+    padding: 4rem 1.2rem 5.5rem;
   }
 
   .register-grid {
@@ -221,8 +221,20 @@
   }
 
   .register-card-btn {
-    font-size: 0.65rem;
-    letter-spacing: 0.14em;
-    padding: 0.9rem 1.2rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    padding: 0.95rem 1rem;
+    min-height: 44px;
+    word-break: break-word;
+    text-wrap: balance;
   }
+}
+
+.register-card--school .register-card-btn.is-active {
+  background: linear-gradient(135deg, #8DD4F0, #6EC1E4);
+  color: #0a3d52;
+}
+
+.register-card--school .register-card-btn.is-active:hover {
+  box-shadow: 0 8px 32px rgba(110, 193, 228, 0.4);
 }

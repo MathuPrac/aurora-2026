@@ -74,7 +74,7 @@ function Register() {
             details={[
               'Open to school students',
               'Workshop, quiz & creative design',
-              'Jun 13 – Jun 20 registration window',
+              'Jun 24 – Jun 30 registration window',
             ]}
             cta={schoolCta}
           />

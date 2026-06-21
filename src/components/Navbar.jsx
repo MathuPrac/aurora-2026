@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useSchoolRegistrationCta } from '../hooks/useRegistrationCta'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -12,6 +13,7 @@ const NAV_LINKS = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const schoolCta = useSchoolRegistrationCta()
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,6 +22,8 @@ function Navbar() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
@@ -30,21 +34,39 @@ function Navbar() {
 
       <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
-          <li key={label}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
+          <li key={label}><a href={href} onClick={closeMenu}>{label}</a></li>
         ))}
-        <li className="nav-links-register">
-          <a href="#register" onClick={() => setMenuOpen(false)}>Register</a>
-        </li>
+        {schoolCta.isOpen && (
+          <li className="nav-links-register nav-links-register--mobile">
+            <a
+              href={schoolCta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+            >
+              School Registration
+            </a>
+          </li>
+        )}
       </ul>
 
       <div className="nav-right-section">
-        <a
-          href="#register"
-          className="nav-cta"
-          onClick={() => setMenuOpen(false)}
-        >
-          Register
-        </a>
+        {schoolCta.isOpen ? (
+          <a
+            href={schoolCta.href}
+            className="nav-cta nav-cta--school"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
+            <span className="nav-cta-full">School Registration</span>
+            <span className="nav-cta-short">School Reg</span>
+          </a>
+        ) : (
+          <a href="#register" className="nav-cta" onClick={closeMenu}>
+            Register
+          </a>
+        )}
       </div>
 
       <button className="nav-hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
