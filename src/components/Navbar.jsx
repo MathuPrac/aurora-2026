@@ -36,25 +36,13 @@ function Navbar() {
         {NAV_LINKS.map(([label, href]) => (
           <li key={label}><a href={href} onClick={closeMenu}>{label}</a></li>
         ))}
-        {schoolCta.isOpen && (
-          <li className="nav-links-register nav-links-register--mobile">
-            <a
-              href={schoolCta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-            >
-              School Registration
-            </a>
-          </li>
-        )}
       </ul>
 
       <div className="nav-right-section">
         {schoolCta.isOpen ? (
           <a
             href={schoolCta.href}
-            className="nav-cta nav-cta--school"
+            className="nav-cta nav-cta--school nav-cta--desktop-only"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
