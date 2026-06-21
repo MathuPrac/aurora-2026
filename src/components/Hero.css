@@ -209,13 +209,7 @@
 }
 
 .hero-reg-btn--school.is-active {
-  background: linear-gradient(135deg, #8DD4F0, #6EC1E4);
-  color: #0a3d52;
-  box-shadow: 0 4px 20px rgba(110, 193, 228, 0.4);
-}
-
-.hero-reg-btn--school.is-active:hover {
-  box-shadow: 0 6px 28px rgba(110, 193, 228, 0.5);
+  box-shadow: 0 4px 20px rgba(240, 80, 35, 0.35);
 }
 
 .hero-reg-btn.is-active:hover {

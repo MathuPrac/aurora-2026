@@ -32,6 +32,8 @@ function Navbar() {
         <span className="nav-logo-text">AURORA</span>
       </a>
 
+      <a href="#hero" className="nav-center-title">AURORA</a>
+
       <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
         {NAV_LINKS.map(([label, href]) => (
           <li key={label}><a href={href} onClick={closeMenu}>{label}</a></li>

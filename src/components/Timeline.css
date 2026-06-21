@@ -128,12 +128,12 @@
 }
 
 .tl-card--school {
-  border-left: 3px solid #6EC1E4;
+  border-left: 3px solid var(--gold-light);
 }
 
 .tl-card--right.tl-card--school {
   border-left: none;
-  border-right: 3px solid #6EC1E4;
+  border-right: 3px solid var(--gold-light);
 }
 
 .tl-card--conference {
@@ -215,8 +215,8 @@
 }
 
 .tl-track--school {
-  color: #B8E8FF;
-  background: rgba(110, 193, 228, 0.18);
+  color: #FFD4A8;
+  background: rgba(250, 169, 103, 0.18);
 }
 
 .tl-track--conference {
@@ -267,7 +267,8 @@
 }
 
 .tl-card--school .tl-link {
-  background: linear-gradient(135deg, #8DD4F0, #6EC1E4);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--obsidian);
 }
 
 .tl-link:hover {
@@ -276,7 +277,7 @@
 }
 
 .tl-card--school .tl-link:hover {
-  box-shadow: 0 4px 16px rgba(110, 193, 228, 0.35);
+  box-shadow: 0 4px 16px rgba(240, 80, 35, 0.35);
 }
 
 .tl-link-arrow {
@@ -325,7 +326,7 @@
   }
 
   .tl-card--school {
-    border-left-color: #6EC1E4 !important;
+    border-left-color: var(--gold-light) !important;
   }
 
   .tl-card--conference {

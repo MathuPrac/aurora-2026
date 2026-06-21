@@ -229,12 +229,3 @@
     text-wrap: balance;
   }
 }
-
-.register-card--school .register-card-btn.is-active {
-  background: linear-gradient(135deg, #8DD4F0, #6EC1E4);
-  color: #0a3d52;
-}
-
-.register-card--school .register-card-btn.is-active:hover {
-  box-shadow: 0 8px 32px rgba(110, 193, 228, 0.4);
-}

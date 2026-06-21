@@ -136,16 +136,20 @@
 }
 
 .nav-cta--school {
-  color: #0a3d52;
-  background: linear-gradient(135deg, #B8E8FF, #6EC1E4);
+  color: var(--obsidian);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
   white-space: nowrap;
 }
 
 .nav-cta--school:hover {
-  background: linear-gradient(135deg, #d0f0ff, #8DD4F0);
+  background: linear-gradient(135deg, #ffc080, var(--gold-light));
 }
 
 .nav-cta-short {
+  display: none;
+}
+
+.nav-center-title {
   display: none;
 }
 
@@ -228,50 +232,79 @@
 
 @media (max-width: 640px) {
   .navbar {
-    padding: 0.3rem 0.75rem;
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    padding: 0.5rem 0.85rem;
     left: 0.75rem;
     right: 0.75rem;
     top: 0.75rem;
-    background: rgba(20, 22, 26, 0.75);
+    min-height: 52px;
+    background: rgba(20, 22, 26, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0;
   }
 
   .nav-logo {
-    background: #fcfaf9d3;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+    background: rgba(252, 250, 249, 0.88);
     border-radius: 50%;
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.6rem;
+    padding: 0;
     gap: 0;
     flex-shrink: 0;
   }
 
   .nav-logo img {
-    height: 30px;
+    height: 26px;
     width: auto;
+    display: block;
+    object-fit: contain;
   }
 
   .nav-logo-text {
-    color: white !important;
-    font-size: 0.9rem;
+    display: none;
+  }
+
+  .nav-center-title {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
     font-weight: 700;
-    position: fixed;
-    left: 50%;
-    top: 0.85rem;
-    transform: translateX(-50%);
-    letter-spacing: 0.05em;
-    margin: 0 !important;
-    z-index: 901;
-    pointer-events: none;
+    letter-spacing: 0.08em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right-section {
+    display: none;
   }
 
   .nav-hamburger {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
     flex-shrink: 0;
+    margin: 0;
+    padding: 6px;
   }
 }
