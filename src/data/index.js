@@ -43,7 +43,7 @@ export const EVENTS = [
 
 // ── REGISTRATION URLS ────────────────────────────────────────────────────────
 export const UNDERGRAD_REGISTRATION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
-export const PROPOSAL_SUBMISSION_URL = 'https://forms.gle/4pGd5xQYCMqzjrFB7'
+export const PROPOSAL_SUBMISSION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScRY2FJfqee5DjtScB_5YCtBQUpNIusvEFHsm8_sqzdYrxIHQ/viewform'
 export const SCHOOL_REGISTRATION_URL = 'https://forms.gle/76HahruTXmjLPwdq6'
 
 /** Set to false when you want to close school registration */
